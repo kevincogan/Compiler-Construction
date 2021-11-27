@@ -1,0 +1,18 @@
+
+
+Main
+{
+	var arg1:integer;
+    var arg7: boolean;
+    
+    arg1 = -6;
+    arg7 = true;
+
+    if(arg1 < 0)
+        {
+           const five: integer = 5;
+        }
+    
+    
+    
+}
