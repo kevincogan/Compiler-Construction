@@ -1,0 +1,5 @@
+main
+{
+  var arg1: integer;
+  arg1 = -4;
+}

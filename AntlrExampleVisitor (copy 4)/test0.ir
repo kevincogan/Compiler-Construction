@@ -1,0 +1,101 @@
+
+multiply:
+	x = getparam 1
+	y = getparam 2
+	ifz x < 0 goto l1
+	goto exit4
+l1:
+	ifz  goto l2
+	goto exit4
+l2:
+	ifz y >= 0 goto l3
+	goto exit4
+l3:
+	minus_sign = True
+
+	t1 = 0 - x
+	x = t1
+
+	goto exit5
+exit4:
+	ifz y < 0 goto l5
+	goto exit8
+l5:
+	ifz  goto l6
+	goto exit8
+l6:
+	ifz x >= 0 goto l7
+	goto exit8
+l7:
+	minus_sign = True
+
+	t1 = 0 - y
+	y = t1
+
+	goto exit9
+exit8:
+	ifz x < 0 goto l9
+	goto exit12
+l9:
+	ifz  goto l10
+	goto exit12
+l10:
+	ifz y < 0 goto l11
+	goto exit12
+l11:
+	minus_sign = False
+
+	t1 = 0 - x
+	x = t1
+
+	t1 = 0 - y
+	y = t1
+
+	goto exit13
+exit12:
+	minus_sign = False
+
+exit13:
+
+exit13:
+
+exit13:
+
+	result = 0
+
+l13:
+	ifz y > 0 goto exit13
+	t1 = x + result
+	result = t1
+
+	t1 = 1 - y
+	y = t1
+
+	goto l13
+exit13:
+
+	if minus_sign == True goto l14
+	goto exit15
+l14:
+	t1 = 0 - result
+	result = t1
+
+	goto exit15
+
+exit15:
+
+	return result
+main:
+	five = 5
+
+	t1 = 0 - 6
+	arg1 = t1
+
+	arg2 = five
+
+
+	param arg1
+	param arg2
+	result = call multiply, 2
+
+	call _exit, 0

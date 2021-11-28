@@ -1,0 +1,5 @@
+
+
+main:
+
+	call _exit, 0

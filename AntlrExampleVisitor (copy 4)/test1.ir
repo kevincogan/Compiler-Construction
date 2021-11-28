@@ -1,0 +1,8 @@
+
+
+main:
+
+	t1 = 0 - 4
+	arg1 = t1
+
+	call _exit, 0
